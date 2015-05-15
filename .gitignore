@@ -1,0 +1,13 @@
+*.sln
+*.suo
+Daybook/Web.config
+*/bin/*
+*/obj/*
+*.scc
+*.user
+TestResults/*
+Packages/*
+packages/*
+My Project/Application.myapp
+*~
+*.swp
