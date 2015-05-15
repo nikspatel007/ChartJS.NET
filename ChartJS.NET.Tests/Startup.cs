@@ -1,12 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+
 
 namespace ChartJS.NET.Tests
 {
-    [TestClass]
+    [TestFixture()]
     public class Startup
     {
-        [TestMethod]
+        [Test()]
         public void TestMethod1()
         {
 
