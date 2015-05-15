@@ -42,6 +42,13 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Implementations\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <Import Project="$(ProjectDir)\..\nuget\NuGet.targets" Condition="Exists('$(ProjectDir)\..\nuget\NuGet.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
