@@ -8,6 +8,30 @@ namespace ChartJS.NET.Charts.Bar
 {
     public class BarChartOptions : GlobalOptions
     {
+        /// <summary>
+        /// Whether to show gridlines
+        /// </summary>
+        public bool ShowGridLines { get; set; }
+
+        /// <summary>
+        /// Sets the gridline color
+        /// </summary>
+        public string GridLineColor { get; set; }
+
+        /// <summary>
+        /// Sets the gridline width in pixels
+        /// </summary>
+        public int GridLineWidth { get; set; }
+
+        /// <summary>
+        /// Whether to show horizontal gridlines
+        /// </summary>
+        public bool ShowHorizontalLines { get; set; }
+
+        /// <summary>
+        /// Whether to show verticle gridlines
+        /// </summary>
+        public bool ShowVerticalLines { get; set; }
 
         /// <summary>
         /// If there is a stroke on each bar

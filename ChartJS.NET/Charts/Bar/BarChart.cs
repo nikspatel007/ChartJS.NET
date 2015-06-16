@@ -10,9 +10,8 @@ namespace ChartJS.NET.Charts.Bar
     {
         private readonly BarChartOptions _barChartOptions = new BarChartOptions();
 
-        public BarChart()
-        {
+        public override ChartTypes ChartType { get { return ChartTypes.Bar; } }
 
-        }
+        public override BarChartOptions ChartOptions { get { return _barChartOptions; } }
     }
 }
