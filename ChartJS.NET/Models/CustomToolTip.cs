@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChartJS.NET
+namespace ChartJS.NET.Models
 {
     public class CustomToolTip
     {
@@ -26,7 +26,7 @@ namespace ChartJS.NET
         /// <summary>
         /// Tooltip Title font options
         /// </summary>
-        public FontOptions TitleFontOptions { get; set; }
+        public FontOptions TitleOptions { get; set; }
 
         /// <summary>
         /// Pixel width of padding above and below tooltip text

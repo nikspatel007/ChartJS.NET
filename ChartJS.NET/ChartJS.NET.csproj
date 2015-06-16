@@ -39,12 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomToolTip.cs" />
-    <Compile Include="FontOptions.cs" />
+    <Compile Include="Charts\Bar\BarChart.cs" />
+    <Compile Include="Charts\Bar\BarChartOptions.cs" />
+    <Compile Include="Charts\ChartTypes.cs" />
+    <Compile Include="Models\CustomToolTip.cs" />
+    <Compile Include="Models\FontOptions.cs" />
     <Compile Include="GlobalOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scale.cs" />
-    <Compile Include="ScaleOverride.cs" />
+    <Compile Include="Models\Scale.cs" />
+    <Compile Include="Models\ScaleOverride.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />

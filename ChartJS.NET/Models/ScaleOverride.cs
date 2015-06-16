@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChartJS.NET
+namespace ChartJS.NET.Models
 {
     public class ScaleOverride
     {
