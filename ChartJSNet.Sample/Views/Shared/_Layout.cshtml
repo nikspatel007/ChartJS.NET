@@ -7,13 +7,15 @@
     <title>@ViewBag.Title</title>
 
     @Styles.Render("~/bundles/styles")
+
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
 </head>
 <body>    
     <div class="container body-content">
         @RenderBody()
     </div>
 
-    @Scripts.Render("~/bundles/scripts")
-    @RenderSection("scripts", required: false)
+    
 </body>
 </html>

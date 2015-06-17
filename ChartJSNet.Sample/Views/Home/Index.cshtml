@@ -1,6 +1,12 @@
-﻿@{
+﻿@model ChartJS.NET.Charts.Bar.BarChart
+
+@{
     ViewBag.Title = "Home";
+    
+    
 }
 
 <h2 class="text-danger text-uppercase">ChartJS.NET Samples Home</h2>
+
+@Html.BuildChart(Model)
 

@@ -12,31 +12,27 @@ namespace ChartJS.NET.Extensions
 {
     public static class HtmlExtensions
     {
-        public static MvcHtmlString CreateChart<TChartOptions>(this HtmlHelper helper, 
-            BaseChart<TChartOptions> chartOptions) where TChartOptions : GlobalOptions
+        public static MvcHtmlString BuildChart<TChartOptions>(this HtmlHelper helper, BaseChart<TChartOptions> chartOptions) where TChartOptions : GlobalOptions
         {
+            string labels = "{\"labels\": [\"" + string.Join("\",\"", chartOptions.Labels) + "\"]";
 
-            string dataSets = string.Format(@"[{{{0}}}]", string.Join(",", chartOptions.Data));
-            string labels = string.Join(",", chartOptions.Labels);
+            var canvasTag = new TagBuilder("canvas");
+            canvasTag.Attributes.Add("width", chartOptions.CanvasProperties.Width.ToString());
+            canvasTag.Attributes.Add("Height", chartOptions.CanvasProperties.Height.ToString());
+            canvasTag.Attributes.Add("id", chartOptions.CanvasProperties.CanvasId);
 
-            string canvasMarkup = string.Format("<canvas id='{0}' width='{1}' height='{2}' class='{3}'></canvas>",
-                chartOptions.CanvasProperties.CanvasId, chartOptions.CanvasProperties.Width, chartOptions.CanvasProperties.Height,
-                chartOptions.CanvasProperties.CssClass);
+            var tag = new TagBuilder("script");
+            tag.Attributes.Add("type", "text/javascript");
 
-            var chart = string.Format(@"
-                {0}
-                <script type='text/javascript'>
-                    var ctx = document.getElementById({1}).getContext('2d');
-                    var data = {{
-                        labels: [{2}],
-                        datasets: {3}
-                    }};
-
-                    var chartManager = new Chart(ctx).{4}(data, {5});
-                </script>", canvasMarkup, chartOptions.CanvasProperties.CanvasId, labels, dataSets, chartOptions.ChartType.ToString(), 
-                          chartOptions.ChartConfig.ToJson());
-
-            MvcHtmlString output = new MvcHtmlString(chart);
+            var tagContent = new StringBuilder();
+            tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", chartOptions.CanvasProperties.CanvasId);
+            tagContent.AppendFormat("var data = JSON.parse('{0}, \"datasets\": [{1}]}}');", labels, chartOptions.Data.ToJson());
+            //tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
+            tagContent.Append("var options = {};");
+            tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{1}(data, options)", chartOptions.CanvasProperties.CanvasId, chartOptions.ChartType);
+            tag.InnerHtml = tagContent.ToString();
+            
+            MvcHtmlString output = new MvcHtmlString(canvasTag.ToString() + tag.ToString());
 
             return output;
         }
