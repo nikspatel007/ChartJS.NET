@@ -1,12 +1,13 @@
-﻿using System;
+﻿using ChartJS.NET.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChartJS.NET.Models
+namespace ChartJS.NET.Charts.Bar
 {
-    public class BaseDataSet
+    public class BarDataSet : BaseDataSets<BarDataSet>
     {
         public string Label { get; set; }
         public string FillColor { get; set; }

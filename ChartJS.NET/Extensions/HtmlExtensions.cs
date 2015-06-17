@@ -1,4 +1,5 @@
 ﻿using ChartJS.NET.Charts;
+using ChartJS.NET.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -12,10 +13,10 @@ namespace ChartJS.NET.Extensions
 {
     public static class HtmlExtensions
     {
-        public static MvcHtmlString BuildChart<TChartOptions>(this HtmlHelper helper, BaseChart<TChartOptions> chartOptions) where TChartOptions : GlobalOptions
+        public static MvcHtmlString BuildChart<TChart, TChartOptions>(this HtmlHelper helper, BaseChart<TChart, TChartOptions> chartOptions) 
+            where TChartOptions : GlobalOptions
+            where TChart : BaseDataSets<TChart>
         {
-            string labels = "{\"labels\": [\"" + string.Join("\",\"", chartOptions.Labels) + "\"]";
-
             var canvasTag = new TagBuilder("canvas");
             canvasTag.Attributes.Add("width", chartOptions.CanvasProperties.Width.ToString());
             canvasTag.Attributes.Add("Height", chartOptions.CanvasProperties.Height.ToString());
@@ -26,9 +27,9 @@ namespace ChartJS.NET.Extensions
 
             var tagContent = new StringBuilder();
             tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", chartOptions.CanvasProperties.CanvasId);
-            tagContent.AppendFormat("var data = JSON.parse('{0}, \"datasets\": [{1}]}}');", labels, chartOptions.Data.ToJson());
+            tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.ChartData.ToJson());
             //tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
-            tagContent.Append("var options = {};");
+            //tagContent.Append("var options = {};");
             tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{1}(data, options)", chartOptions.CanvasProperties.CanvasId, chartOptions.ChartType);
             tag.InnerHtml = tagContent.ToString();
             

@@ -51,7 +51,8 @@
     <Compile Include="Charts\BaseChart.cs" />
     <Compile Include="Charts\CanvasProperties.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
-    <Compile Include="Models\BaseDataSet.cs" />
+    <Compile Include="Models\BaseDataSets.cs" />
+    <Compile Include="Charts\Bar\BarDataSet.cs" />
     <Compile Include="Charts\ChartTypes.cs" />
     <Compile Include="Models\CustomToolTip.cs" />
     <Compile Include="Models\FontOptions.cs" />

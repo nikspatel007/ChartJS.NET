@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace ChartJS.NET.Charts
 {
-    public abstract class BaseChart<TChartOptions> where TChartOptions : GlobalOptions
+    public abstract class BaseChart<TChart, TChartOptions> 
+        where TChart : BaseDataSets<TChart> 
+        where TChartOptions : GlobalOptions
     {
         public BaseChart()
         {
             CanvasProperties = new CanvasProperties();
+            ChartData = new BaseDataSets<TChart>();
         }
 
-        public BaseDataSet Data { get; set; }
-        public List<string> Labels { get; set; }
+        public BaseDataSets<TChart> ChartData { get; set; }
         public abstract ChartTypes ChartType { get; }
         public CanvasProperties CanvasProperties { get; set; }
         public abstract TChartOptions ChartConfig { get; }

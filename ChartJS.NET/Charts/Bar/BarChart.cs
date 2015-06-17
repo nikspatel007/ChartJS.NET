@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChartJS.NET.Charts.Bar
 {
-    public class BarChart : BaseChart<BarChartOptions>
+    public class BarChart : BaseChart<BarDataSet, BarChartOptions>
     {
         private readonly BarChartOptions _barChartOptions = new BarChartOptions();
 
