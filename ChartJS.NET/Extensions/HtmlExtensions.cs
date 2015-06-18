@@ -28,8 +28,8 @@ namespace ChartJS.NET.Extensions
             var tagContent = new StringBuilder();
             tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", chartOptions.CanvasProperties.CanvasId);
             tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.ChartData.ToJson());
-            //tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
-            tagContent.Append("var options = {};");
+            tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
+            //tagContent.Append("var options = {};");
             tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{1}(data, options)", chartOptions.CanvasProperties.CanvasId, chartOptions.ChartType);
             tag.InnerHtml = tagContent.ToString();
             
