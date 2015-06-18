@@ -1,0 +1,19 @@
+﻿@model ChartJS.NET.Charts.Line.LineChart
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-danger">Line Chart</h2>
+
+<table>
+    <tr>
+        <td>
+            @Html.BuildChart(Model)
+        </td>
+    </tr>
+</table>
+
+<br/>
+<br/>

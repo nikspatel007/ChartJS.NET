@@ -50,6 +50,9 @@
     <Compile Include="Charts\Bar\BarChartOptions.cs" />
     <Compile Include="Charts\BaseChart.cs" />
     <Compile Include="Charts\CanvasProperties.cs" />
+    <Compile Include="Charts\Line\LineChart.cs" />
+    <Compile Include="Charts\Line\LineChartOptions.cs" />
+    <Compile Include="Charts\Line\LineDataSet.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Models\BaseDataSets.cs" />
     <Compile Include="Charts\Bar\BarDataSet.cs" />
