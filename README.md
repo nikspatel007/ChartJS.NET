@@ -51,4 +51,4 @@ To build your Bar Chart, you will need to add code to your controller and then u
   
       @Html.BuildChart(Model)
   
-  
+  You should now see your bar chart rendered on the page.  There is also a samples project included so you can see how the code is being used.
