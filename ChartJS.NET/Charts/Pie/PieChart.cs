@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChartJS.NET.Charts.PieDoughnut
+namespace ChartJS.NET.Charts.Pie
 {
-    public class Pie : BaseChart<PieDataSet, PieChartOptions>
+    public class PieChart : BaseChart<List<PieChartData>, PieChartOptions>
     {
         private readonly PieChartOptions _chartOptions = new PieChartOptions();
 

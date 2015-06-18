@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace ChartJS.NET.Extensions
 {
@@ -15,7 +16,7 @@ namespace ChartJS.NET.Extensions
     {
         public static MvcHtmlString BuildChart<TChart, TChartOptions>(this HtmlHelper helper, BaseChart<TChart, TChartOptions> chartOptions) 
             where TChartOptions : class
-            where TChart : BaseDataSets<TChart>
+            where TChart : new()
         {
             var canvasTag = new TagBuilder("canvas");
             canvasTag.Attributes.Add("width", chartOptions.CanvasProperties.Width.ToString());
@@ -27,9 +28,9 @@ namespace ChartJS.NET.Extensions
 
             var tagContent = new StringBuilder();
             tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", chartOptions.CanvasProperties.CanvasId);
-            tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.ChartData.ToJson());
+            tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.Data.ToJson());
             tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
-            tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{1}(data, options);", chartOptions.CanvasProperties.CanvasId, chartOptions.ChartType);
+            tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{0}(data, options);", chartOptions.ChartType);
             tag.InnerHtml = tagContent.ToString();
             
             MvcHtmlString output = new MvcHtmlString(canvasTag.ToString() + tag.ToString());
@@ -45,7 +46,8 @@ namespace ChartJS.NET.Extensions
             if (globalOptions != null)
             {
                 tag.Attributes.Add("type", "text/javascript");
-                tagContent.Append("Chart.defaults.global = {animate: false};");//, globalOptions.ToJson());
+                tagContent.AppendFormat("var options = JSON.parse('{0}');", globalOptions.ToJson());
+                tagContent.Append("Chart.defaults.global = options;");
 
                 tag.InnerHtml = tagContent.ToString();
 
@@ -58,7 +60,7 @@ namespace ChartJS.NET.Extensions
             JsonSerializerSettings settings = new JsonSerializerSettings() 
             { 
                 ContractResolver = new CamelCasePropertyNamesContractResolver(), 
-                NullValueHandling = NullValueHandling.Ignore 
+                NullValueHandling = NullValueHandling.Ignore
             };
 
             return JsonConvert.SerializeObject(obj, settings);

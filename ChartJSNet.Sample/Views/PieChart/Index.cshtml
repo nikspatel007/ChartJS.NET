@@ -1,0 +1,11 @@
+﻿@model ChartJS.NET.Charts.Pie.PieChart
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Pie Chart Example</h2>
+
+@Html.BuildChart(Model)
+
+@Html.BuildGlobalOptions(new ChartJS.NET.GlobalOptions() { Animate = false })

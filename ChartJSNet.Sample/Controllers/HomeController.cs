@@ -12,7 +12,7 @@ namespace ChartJSNet.Sample.Controllers
         {
             BarChart barChart = new BarChart();
 
-            barChart.ChartData.Datasets = new List<BarDataSet>()
+            barChart.Data.Datasets = new List<BarDataSet>()
             {
                 new BarDataSet() {
                     Data = new double[] { 65, 59, 80, 81, 56, 55, 40 },
@@ -32,7 +32,7 @@ namespace ChartJSNet.Sample.Controllers
                 }
             };
 
-            barChart.ChartData.Labels = new List<string>() {
+            barChart.Data.Labels = new List<string>() {
                 "January", "February", "March", "April", "May", "June", "July"
             };
 

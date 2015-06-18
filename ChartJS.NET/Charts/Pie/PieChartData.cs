@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChartJS.NET.Charts.PieDoughnut
+namespace ChartJS.NET.Charts.Pie
 {
-    public class PieDataSet : BaseDataSets<PieDataSet>
+    public class PieChartData 
     {
         public double Value { get; set; }
         public string Color { get; set; }
