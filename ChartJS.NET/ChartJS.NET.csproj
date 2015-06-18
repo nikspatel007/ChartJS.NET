@@ -53,6 +53,9 @@
     <Compile Include="Charts\Line\LineChart.cs" />
     <Compile Include="Charts\Line\LineChartOptions.cs" />
     <Compile Include="Charts\Line\LineDataSet.cs" />
+    <Compile Include="Charts\Radar\RadarChart.cs" />
+    <Compile Include="Charts\Radar\RadarChartOptions.cs" />
+    <Compile Include="Charts\Radar\RadarDataSet.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Models\BaseDataSets.cs" />
     <Compile Include="Charts\Bar\BarDataSet.cs" />
