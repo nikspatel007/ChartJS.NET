@@ -6,52 +6,52 @@ using System.Threading.Tasks;
 
 namespace ChartJS.NET.Charts.Bar
 {
-    public class BarChartOptions : GlobalOptions
+    public class BarChartOptions
     {
         /// <summary>
         /// Whether to show gridlines
         /// </summary>
-        public bool ShowGridLines { get; set; }
+        public bool ScaleShowGridLines { get; set; }
 
         /// <summary>
-        /// Sets the gridline color
+        /// Sets the gridline color; use rgba format - "rgba(0,0,0,.1)"
         /// </summary>
-        public string GridLineColor { get; set; }
+        public string ScaleGridLineColor { get; set; }
 
         /// <summary>
         /// Sets the gridline width in pixels
         /// </summary>
-        public int GridLineWidth { get; set; }
+        public int ScaleGridLineWidth { get; set; }
 
         /// <summary>
         /// Whether to show horizontal gridlines
         /// </summary>
-        public bool ShowHorizontalLines { get; set; }
+        public bool ScaleShowHorizontalLines { get; set; }
 
         /// <summary>
         /// Whether to show verticle gridlines
         /// </summary>
-        public bool ShowVerticalLines { get; set; }
+        public bool ScaleShowVerticalLines { get; set; }
 
         /// <summary>
         /// If there is a stroke on each bar
         /// </summary>
-        public bool ShowStroke { get; set; }
+        public bool BarShowStroke { get; set; }
 
         /// <summary>
         /// Pixel width of the bar stroke
         /// </summary>
-        public int StrokeWidth { get; set; }
+        public int BarStrokeWidth { get; set; }
 
         /// <summary>
         /// Spacing between each of the X value sets in pixels
         /// </summary>
-        public int ValueSpacing { get; set; }
+        public int BarValueSpacing { get; set; }
 
         /// <summary>
         /// Spacing between data sets within X values in pixels
         /// </summary>
-        public int DatasetSpacing { get; set; }
+        public int BarDatasetSpacing { get; set; }
 
     }
 }

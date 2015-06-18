@@ -9,7 +9,7 @@ namespace ChartJS.NET.Charts
 {
     public abstract class BaseChart<TChart, TChartOptions> 
         where TChart : BaseDataSets<TChart> 
-        where TChartOptions : GlobalOptions
+        where TChartOptions : class
     {
         public BaseChart()
         {
