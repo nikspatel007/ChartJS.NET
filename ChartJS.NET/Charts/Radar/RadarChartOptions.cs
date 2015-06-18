@@ -7,19 +7,22 @@
         /// </summary>
         public RadarChartOptions()
         {
-            ScaleShowGridLines = true;
-            ScaleGridLineColor = "rgba(0,0,0,0.05)";
-            ScaleGridLineWidth = 1;
-            ScaleShowHorizontalLines = true;
-            ScaleShowVerticalLines = true;
-            BeizerCurve = true;
-            BeizerCurveTension = 0.4;
-            PointDot = true;
-            PointDotRadius = 4;
-            PointDotStrokeWidth = 1;
-            PointHitDetectionRadius = 20;
-            DataSetStrokeWidth = 2;
-            DatasetFill = true;
+             ScaleShowGridLines = true;
+             AngleShowLineOut = true;
+             ScaleShowLabels = false;
+             ScaleBeginAtZero = true;
+             AngleLineColor = "rgba(0,0,0,.1)";
+             AngleLineWidth = 1;
+             PointLabelFontFamily = "Arial";
+             PointLabelFontStyle = "normal";
+             PointLabelFontSize = 10;
+             PointLabelFontColor = "#666";
+             PointDot = true;
+             PointDotRadius = 4;
+             PointDotStrokeWidth = 1;
+             PointHitDetectionRadius = 20;
+             DataSetStrokeWidth = 2;
+             DatasetFill = true;
         }
 
         /// <summary>
@@ -28,49 +31,64 @@
         public bool ScaleShowGridLines { get; set; }
 
         /// <summary>
-        ///     Colour of the grid lines; use rgba format - "rgba(0,0,0,.1)"
+        ///     Whether we show the angle lines out of the radar
         /// </summary>
         public bool AngleShowLineOut { get; set; }
 
         /// <summary>
-        ///     Width of the grid lines
+        ///     Whether to show labels on the scale
         /// </summary>
         public bool ScaleShowLabels { get; set; }
 
         /// <summary>
-        ///     Whether to show horizontal lines (except X axis)
+        ///    Whether the scale should begin at zero
         /// </summary>
         public bool ScaleBeginAtZero { get; set; }
 
         /// <summary>
-        ///     Whether to show vertical lines (except Y axis)
+        ///    Colour of the angle line
         /// </summary>
         public string AngleLineColor { get; set; }
 
         /// <summary>
-        ///     Whether the line is curved between points
+        ///    Pixel width of the angle line
         /// </summary>
         public int AngleLineWidth { get; set; }
 
-        ///// <summary>
-        /////     Tension of the bezier curve between points
-        ///// </summary>
-        //public string PointLabelFontFamily { get; set; }
+        /// <summary>
+        ///    Point label font declaration
+        /// </summary>
+        public string PointLabelFontFamily { get; set; }
 
-        ///// <summary>
-        /////     Whether to show a dot for each point
-        ///// </summary>
-        //public string PointLabelFontFamily { get; set; }
+        /// <summary>
+        ///    Point label font weight
+        /// </summary>
+        public string PointLabelFontStyle { get; set; }
 
-        ///// <summary>
-        /////     Radius of each point dot in pixels
-        ///// </summary>
-        //public string PointLabelFontFamily { get; set; }
+        /// <summary>
+        ///     Point label font size in pixels
+        /// </summary>
+        public int PointLabelFontSize { get; set; }
 
-        ///// <summary>
-        /////     Pixel width of point dot stroke
-        ///// </summary>
-        //public string PointLabelFontFamily { get; set; }
+        /// <summary>
+        ///     Pixel width of point dot stroke
+        /// </summary>
+        public string PointLabelFontColor { get; set; }
+
+        /// <summary>
+        ///     Whether to show a dot for each point
+        /// </summary>
+        public bool PointDot { get; set; }
+
+        /// <summary>
+        ///     Radius of each point dot in pixels
+        /// </summary>
+        public int PointDotRadius { get; set; }
+
+        /// <summary>
+        ///     Pixel width of point dot stroke
+        /// </summary>
+        public int PointDotStrokeWidth { get; set; }
 
         /// <summary>
         ///     amount extra to add to the radius to cater for hit detection outside the drawn point

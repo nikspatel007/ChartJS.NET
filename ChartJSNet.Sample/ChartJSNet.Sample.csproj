@@ -134,6 +134,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LineChartController.cs" />
+    <Compile Include="Controllers\RadarChartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -243,6 +244,7 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\LineChart\Index.cshtml" />
+    <Content Include="Views\RadarChart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
