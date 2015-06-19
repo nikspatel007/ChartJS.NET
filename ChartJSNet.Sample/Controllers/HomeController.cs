@@ -36,13 +36,6 @@ namespace ChartJSNet.Sample.Controllers
                 "January", "February", "March", "April", "May", "June", "July"
             };
 
-
-            barChart.ChartConfig.BarDatasetSpacing = 50;
-            barChart.ChartConfig.ScaleGridLineColor = "rgba(0,0,0, 1)";
-            barChart.ChartConfig.ScaleGridLineWidth = 2;
-            barChart.ChartConfig.ScaleShowGridLines = true;
-            barChart.ChartConfig.ScaleShowHorizontalLines = true;
-
             return View(barChart);
         }
     }
