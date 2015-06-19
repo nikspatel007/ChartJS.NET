@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using ChartJS.NET.Charts;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 
 namespace ChartJS.NET.Extensions
 {
@@ -13,17 +14,19 @@ namespace ChartJS.NET.Extensions
             where TChartOptions : class
             where TChart : new()
         {
+
+            var canvasId = chartOptions.CanvasProperties.CanvasId + new Random().Next().ToString();
+
             var canvasTag = new TagBuilder("canvas");
             canvasTag.Attributes.Add("width", chartOptions.CanvasProperties.Width.ToString());
             canvasTag.Attributes.Add("Height", chartOptions.CanvasProperties.Height.ToString());
-            canvasTag.Attributes.Add("id", chartOptions.CanvasProperties.CanvasId);
+            canvasTag.Attributes.Add("id", canvasId);
 
             var tag = new TagBuilder("script");
             tag.Attributes.Add("type", "text/javascript");
 
             var tagContent = new StringBuilder();
-            tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');",
-                chartOptions.CanvasProperties.CanvasId);
+            tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", canvasId);
             tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.Data.ToJson());
             tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
             tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{0}(data, options);", chartOptions.ChartType);

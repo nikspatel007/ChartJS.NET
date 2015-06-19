@@ -138,6 +138,7 @@
     <Compile Include="Controllers\LineChartController.cs" />
     <Compile Include="Controllers\RadarChartController.cs" />
     <Compile Include="Controllers\PolarAreaChartController.cs" />
+    <Compile Include="Controllers\SPAController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,11 +147,13 @@
     <Compile Include="ViewModels\chartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -223,6 +226,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -232,7 +236,41 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\move-top.js" />
+    <Content Include="Scripts\responsiveslides.min.js" />
+    <Content Include="Scripts\wow.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Template\css\animate.css" />
+    <Content Include="Template\css\bootstrap.css" />
+    <Content Include="Template\css\style.css" />
+    <Content Include="Template\images\bg.jpg" />
+    <Content Include="Template\images\easytop.png" />
+    <Content Include="Template\images\icon1.png" />
+    <Content Include="Template\images\icon2.png" />
+    <Content Include="Template\images\icon3.png" />
+    <Content Include="Template\images\icon4.png" />
+    <Content Include="Template\images\icons.png" />
+    <Content Include="Template\images\icons1.png" />
+    <Content Include="Template\images\line.png" />
+    <Content Include="Template\images\logo.png" />
+    <Content Include="Template\images\m1.jpg" />
+    <Content Include="Template\images\m2.jpg" />
+    <Content Include="Template\images\map.jpg" />
+    <Content Include="Template\images\michigan_vs_osu.png" />
+    <Content Include="Template\images\nav.png" />
+    <Content Include="Template\images\phn.png" />
+    <Content Include="Template\images\phn2.png" />
+    <Content Include="Template\images\phn3.jpg" />
+    <Content Include="Template\images\pr1.png" />
+    <Content Include="Template\images\pr2.png" />
+    <Content Include="Template\images\price.jpg" />
+    <Content Include="Template\images\social.png" />
+    <Content Include="Template\index.html" />
+    <Content Include="Template\js\easing.js" />
+    <Content Include="Template\js\jquery.min.js" />
+    <Content Include="Template\js\move-top.js" />
+    <Content Include="Template\js\responsiveslides.min.js" />
+    <Content Include="Template\js\wow.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -252,6 +290,8 @@
     <Content Include="Views\LineChart\Index.cshtml" />
     <Content Include="Views\PolarAreaChart\Index.cshtml" />
     <Content Include="Views\RadarChart\Index.cshtml" />
+    <Content Include="Views\SPA\Index.cshtml" />
+    <Content Include="Views\Shared\_SPALayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

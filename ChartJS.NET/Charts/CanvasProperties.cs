@@ -6,7 +6,7 @@
         {
             Height = 400;
             Width = 600;
-            CanvasId = "ChangeMe";
+            CanvasId = "Canvase";
         }
 
         public int Height { get; set; }

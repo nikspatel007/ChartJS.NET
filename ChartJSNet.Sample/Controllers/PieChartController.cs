@@ -10,6 +10,9 @@ namespace ChartJS.NET.Sample.Controllers
         // GET: PieChart
         public ActionResult Index()
         {
+
+            List<PieChart> chartsList = new List<PieChart>();
+            
             var pieChart = new PieChart();
 
             pieChart.Data = new List<PieChartData>
@@ -37,10 +40,41 @@ namespace ChartJS.NET.Sample.Controllers
                 }
             };
 
-            pieChart.ChartConfig.AnimationSteps = 500;
-            pieChart.ChartConfig.AnimationEasing = Enums.AnimationEasing.easeInBounce;
+            chartsList.Add(pieChart);
 
-            return View(pieChart);
+            var pieChart2 = new PieChart();
+
+            pieChart2.Data = new List<PieChartData>
+            {
+                new PieChartData
+                {
+                    Value = 58,
+                    Color = "#00274c",
+                    Highlight = "#ffcb05",
+                    Label = "Michigan Wins Over OSU"
+                },
+                new PieChartData
+                {
+                    Value = 46,
+                    Color = "#bb0000",
+                    Highlight = "#666666",
+                    Label = "OSU Wins Over Michigan"
+                },
+                new PieChartData
+                {
+                    Value = 6,
+                    Color = "#ffcb05",
+                    Highlight = "#666666",
+                    Label = "Ties"
+                }
+            };
+
+            pieChart2.CanvasProperties.Height = 453;
+            pieChart2.CanvasProperties.Width = 519;
+
+            chartsList.Add(pieChart2);
+
+            return View(chartsList);
         }
     }
 }

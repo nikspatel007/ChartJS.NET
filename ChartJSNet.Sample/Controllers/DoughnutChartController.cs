@@ -35,6 +35,10 @@ namespace ChartJS.NET.Sample.Controllers
                 }
             };
 
+            doughnutChart.ChartConfig.SegmentStrokeColor = System.Drawing.Color.Violet;
+            doughnutChart.ChartConfig.SegmentShowStroke = true;
+            doughnutChart.ChartConfig.SegmentStrokeWidth = 5;
+
             return View(doughnutChart);
         }
     }
