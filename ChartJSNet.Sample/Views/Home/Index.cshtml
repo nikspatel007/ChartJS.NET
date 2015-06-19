@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2 class="text-danger text-uppercase">ChartJS.NET Samples Home</h2>
@@ -10,6 +11,9 @@
     <tr>
         <td>
             @Html.BuildChart(Model)
+        </td>
+        <td>
+            <canvas id="income" width="600" height="400"></canvas>
         </td>
     </tr>
     <tr>

@@ -58,6 +58,9 @@
     <Compile Include="Charts\Pie\PieChart.cs" />
     <Compile Include="Charts\Pie\PieChartOptions.cs" />
     <Compile Include="Charts\Pie\PieChartData.cs" />
+    <Compile Include="Charts\PolarAreaChart\PolarAreaChart.cs" />
+    <Compile Include="Charts\PolarAreaChart\PolarAreaChartData.cs" />
+    <Compile Include="Charts\PolarAreaChart\PolarAreaChartOptions.cs" />
     <Compile Include="Charts\Line\LineChart.cs" />
     <Compile Include="Charts\Line\LineChartOptions.cs" />
     <Compile Include="Charts\Line\LineDataSet.cs" />
