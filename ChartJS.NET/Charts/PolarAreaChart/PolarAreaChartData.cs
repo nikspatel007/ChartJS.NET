@@ -1,6 +1,6 @@
-﻿namespace ChartJS.NET.Charts.Pie
+﻿namespace ChartJS.NET.Charts.PolarAreaChart
 {
-    public class PieChartData
+    public class PolarAreaChartData
     {
         public double Value { get; set; }
         public string Color { get; set; }

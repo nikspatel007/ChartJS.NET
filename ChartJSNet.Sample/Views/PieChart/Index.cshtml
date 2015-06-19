@@ -1,4 +1,5 @@
-﻿@model ChartJS.NET.Charts.Pie.PieChart
+﻿@using ChartJS.NET
+@model ChartJS.NET.Charts.Pie.PieChart
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,4 +9,4 @@
 
 @Html.BuildChart(Model)
 
-@Html.BuildGlobalOptions(new ChartJS.NET.GlobalOptions() { Animate = false })
+@Html.BuildGlobalOptions(new GlobalOptions {Animate = false})

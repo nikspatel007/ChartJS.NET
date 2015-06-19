@@ -1,14 +1,8 @@
-﻿using ChartJS.NET.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ChartJS.NET.Infrastructure;
+﻿using ChartJS.NET.Infrastructure;
 
 namespace ChartJS.NET.Charts
 {
-    public abstract class BaseChart<TChart, TChartOptions> 
+    public abstract class BaseChart<TChart, TChartOptions>
         where TChart : new()
         where TChartOptions : class
     {
@@ -22,6 +16,5 @@ namespace ChartJS.NET.Charts
         public abstract Enums.ChartTypes ChartType { get; }
         public CanvasProperties CanvasProperties { get; set; }
         public abstract TChartOptions ChartConfig { get; }
-
     }
 }

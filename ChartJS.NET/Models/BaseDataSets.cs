@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ChartJS.NET.Models
 {
@@ -13,6 +9,7 @@ namespace ChartJS.NET.Models
             Labels = new List<string>();
             Datasets = new List<T>();
         }
+
         public List<string> Labels { get; set; }
         public List<T> Datasets { get; set; }
     }

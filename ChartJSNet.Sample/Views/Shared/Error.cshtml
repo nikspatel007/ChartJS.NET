@@ -1,4 +1,4 @@
-﻿@model System.Web.Mvc.HandleErrorInfo
+﻿@model HandleErrorInfo
 
 @{
     Layout = "_Layout.cshtml";
@@ -6,9 +6,10 @@
 }
 
 
-
 <div>
-    <h3>An unexpected error has occurred. <small class="text-danger">Please contact the system administrator.</small></h3>
+    <h3>
+        An unexpected error has occurred. <small class="text-danger">Please contact the system administrator.</small>
+    </h3>
     @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
     {
         <div>
