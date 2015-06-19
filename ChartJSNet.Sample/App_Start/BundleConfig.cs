@@ -17,7 +17,8 @@ namespace ChartJS.NET.Sample
                 "~/Scripts/easing.js",
                 "~/Scripts/move-top.js",
                 "~/Scripts/responsiveslides.min.js",
-                "~/Scripts/wow.min.js"));
+                "~/Scripts/wow.min.js",
+                "~/Scripts/Prism/prism.js"));
 
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
@@ -25,7 +26,8 @@ namespace ChartJS.NET.Sample
                 "~/Content/site.css",
                 "~/Content/themes/base/*.css",
                 "~/Content/style.css",
-                "~/Content/animate.css"));
+                "~/Content/animate.css",
+                "~/Content/Prism/*.css"));
 
 
             BundleTable.EnableOptimizations = true;

@@ -15,3 +15,4 @@
 /// <reference path="move-top.js" />
 /// <reference path="responsiveslides.min.js" />
 /// <reference path="wow.min.js" />
+/// <reference path="prism/prism.js" />
