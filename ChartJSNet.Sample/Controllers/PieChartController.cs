@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using ChartJS.NET.Charts.Pie;
 using ChartJS.NET.Infrastructure;
 
-namespace ChartJSNet.Sample.Controllers
+namespace ChartJS.NET.Sample.Controllers
 {
     public class PieChartController : Controller
     {

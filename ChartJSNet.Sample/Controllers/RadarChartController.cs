@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using ChartJS.NET.Charts.Radar;
 
-namespace ChartJSNet.Sample.Controllers
+namespace ChartJS.NET.Sample.Controllers
 {
     public class RadarChartController : Controller
     {

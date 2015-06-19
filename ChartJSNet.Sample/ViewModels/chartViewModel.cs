@@ -1,4 +1,4 @@
-﻿namespace ChartJSNet.Sample.ViewModels
+﻿namespace ChartJS.NET.Sample.ViewModels
 {
     public class chartViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace ChartJSNet.Sample
+namespace ChartJS.NET.Sample
 {
     public class BundleConfig
     {

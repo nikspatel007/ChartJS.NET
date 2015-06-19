@@ -1,7 +1,7 @@
 using System;
 using System.Web;
 using System.Web.Mvc;
-using ChartJSNet.Sample.App_Start;
+using ChartJS.NET.Sample.App_Start;
 using MCV.Skeleton.Infrastructure;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
@@ -11,7 +11,7 @@ using WebActivatorEx;
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof (NinjectWebCommon), "Start")]
 [assembly: ApplicationShutdownMethod(typeof (NinjectWebCommon), "Stop")]
 
-namespace ChartJSNet.Sample.App_Start
+namespace ChartJS.NET.Sample.App_Start
 {
     public static class NinjectWebCommon
     {

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using ChartJS.NET.Charts.Line;
 
-namespace ChartJSNet.Sample.Controllers
+namespace ChartJS.NET.Sample.Controllers
 {
     public class LineChartController : Controller
     {

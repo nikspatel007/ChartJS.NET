@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace ChartJSNet.Sample.Controllers
+namespace ChartJS.NET.Sample.Controllers
 {
     public class ErrorController : Controller
     {

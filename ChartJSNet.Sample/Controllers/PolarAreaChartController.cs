@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using ChartJS.NET.Charts.PolarAreaChart;
 using ChartJS.NET.Infrastructure;
 
-namespace ChartJSNet.Sample.Controllers
+namespace ChartJS.NET.Sample.Controllers
 {
     public class PolarAreaChartController : Controller
     {

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using ChartJS.NET.Charts.Doughnut;
 
-namespace ChartJSNet.Sample.Controllers
+namespace ChartJS.NET.Sample.Controllers
 {
     public class DoughnutChartController : Controller
     {

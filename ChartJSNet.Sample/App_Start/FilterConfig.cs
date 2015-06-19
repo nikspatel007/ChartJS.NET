@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace ChartJSNet.Sample
+namespace ChartJS.NET.Sample
 {
     public class FilterConfig
     {
