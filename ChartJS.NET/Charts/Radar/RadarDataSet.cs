@@ -12,5 +12,5 @@ namespace ChartJS.NET.Charts.Radar
         public string PointHighlightFill { get; set; }
         public string PointHighlightStroke { get; set; }
         public double[] Data { get; set; }
-    } 
+    }
 }
