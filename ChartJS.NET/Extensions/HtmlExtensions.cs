@@ -29,7 +29,7 @@ namespace ChartJS.NET.Extensions
             tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", canvasId);
             tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.Data.ToJson());
             tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
-            tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{0}(data, options);", chartOptions.ChartType);
+            tagContent.AppendFormat("var {0}_Chart = new Chart(ctx).{1}(data, options);", canvasId, chartOptions.ChartType);
             tag.InnerHtml = tagContent.ToString();
 
             var output = new MvcHtmlString(canvasTag + "" + tag);

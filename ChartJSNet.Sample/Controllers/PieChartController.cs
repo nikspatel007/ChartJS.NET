@@ -7,10 +7,8 @@ namespace ChartJS.NET.Sample.Controllers
 {
     public class PieChartController : Controller
     {
-        // GET: PieChart
         public ActionResult Index()
         {
-
             List<PieChart> chartsList = new List<PieChart>();
             
             var pieChart = new PieChart();
