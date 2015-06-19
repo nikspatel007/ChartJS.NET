@@ -1,6 +1,6 @@
 ﻿namespace ChartJS.NET.Charts.Radar
 {
-    public class RadarChartOptions
+    public class RadarChartOptions 
     {
          /// <summary>
         ///     Default Values.
