@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChartJS.NET.Infrastructure;
 
 namespace ChartJS.NET
 {
@@ -21,16 +22,8 @@ namespace ChartJS.NET
 
         /// <summary>
         /// Animation easing effect;
-        /// Possible effects are:
-        /// easeInOutQuart, linear, easeOutBounce, easeInBack, easeInOutQuad,
-        /// easeOutQuart, easeOutQuad, easeInOutBounce, easeOutSine, easeInOutCubic,
-        /// easeInExpo, easeInOutBack, easeInCirc, easeInOutElastic, easeOutBack,
-        /// easeInQuad, easeInOutExpo, easeInQuart, easeOutQuint, easeInOutCirc,
-        /// easeInSine, easeOutExpo, easeOutCirc, easeOutCubic, easeInQuint,
-        /// easeInElastic, easeInOutSine, easeInOutQuint, easeInBounce,
-        /// easeOutElastic, easeInCubic
         /// </summary>
-        public string AnimationEasing { get; set; }
+        public Enums.AnimationEasing AnimationEasing { get; set; }
 
         /// <summary>
         /// Show the scale

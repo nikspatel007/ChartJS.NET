@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChartJS.NET.Infrastructure;
 
 namespace ChartJS.NET.Charts
 {
@@ -18,7 +19,7 @@ namespace ChartJS.NET.Charts
         }
 
         public TChart Data { get; set; }
-        public abstract ChartTypes ChartType { get; }
+        public abstract Enums.ChartTypes ChartType { get; }
         public CanvasProperties CanvasProperties { get; set; }
         public abstract TChartOptions ChartConfig { get; }
 

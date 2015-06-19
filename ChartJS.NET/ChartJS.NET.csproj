@@ -55,9 +55,9 @@
     <Compile Include="Charts\Pie\PieChartOptions.cs" />
     <Compile Include="Charts\Pie\PieChartData.cs" />
     <Compile Include="Extensions\HtmlExtensions.cs" />
+    <Compile Include="Infrastructure\Enums.cs" />
     <Compile Include="Models\BaseDataSets.cs" />
     <Compile Include="Charts\Bar\BarDataSet.cs" />
-    <Compile Include="Charts\ChartTypes.cs" />
     <Compile Include="Models\CustomToolTip.cs" />
     <Compile Include="Models\FontOptions.cs" />
     <Compile Include="GlobalOptions.cs" />
