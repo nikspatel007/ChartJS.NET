@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChartJS.NET.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ChartJS.NET.Charts.Bar
     {
         private readonly BarChartOptions _barChartOptions = new BarChartOptions();
 
-        public override ChartTypes ChartType { get { return ChartTypes.Bar; } }
+        public override Enums.ChartTypes ChartType { get { return Enums.ChartTypes.Bar; } }
 
         public override BarChartOptions ChartConfig
         {

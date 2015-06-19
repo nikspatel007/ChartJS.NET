@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChartJS.NET.Infrastructure;
 
 namespace ChartJS.NET
 {
@@ -17,31 +18,23 @@ namespace ChartJS.NET
         /// <summary>
         /// Number of animation steps
         /// </summary>
-        public int AnimationSteps { get; set; }
+        public int? AnimationSteps { get; set; }
 
         /// <summary>
         /// Animation easing effect;
-        /// Possible effects are:
-        /// easeInOutQuart, linear, easeOutBounce, easeInBack, easeInOutQuad,
-        /// easeOutQuart, easeOutQuad, easeInOutBounce, easeOutSine, easeInOutCubic,
-        /// easeInExpo, easeInOutBack, easeInCirc, easeInOutElastic, easeOutBack,
-        /// easeInQuad, easeInOutExpo, easeInQuart, easeOutQuint, easeInOutCirc,
-        /// easeInSine, easeOutExpo, easeOutCirc, easeOutCubic, easeInQuint,
-        /// easeInElastic, easeInOutSine, easeInOutQuint, easeInBounce,
-        /// easeOutElastic, easeInCubic
         /// </summary>
-        public string AnimationEasing { get; set; }
+        public Enums.AnimationEasing AnimationEasing { get; set; }
 
         /// <summary>
         /// Show the scale
         /// </summary>
-        public bool ShowScale { get; set; }
+        public bool? ShowScale { get; set; }
 
 
         /// <summary>
         /// Add hardcoded scale
         /// </summary>
-        public bool ScaleOverride { get; set; }
+        public bool? ScaleOverride { get; set; }
 
         /// <summary>
         /// Properties to define if ScaleOverride is true; All properties are required
@@ -51,23 +44,23 @@ namespace ChartJS.NET
         /// <summary>
         /// Whether or not the chart is responsive and resizes with the browser size
         /// </summary>
-        public bool Responsive { get; set; }
+        public bool? Responsive { get; set; }
 
         /// <summary>
         /// Whether to maintain the starting aspect ratio or not when responsive; 
         /// if set to false, will take up entire container
         /// </summary>
-        public bool MaintainAspectRatio { get; set; }
+        public bool? MaintainAspectRatio { get; set; }
 
         /// <summary>
         /// Whether or not to draw tooltips on the canvas or not
         /// </summary>
-        public bool ShowToolTips { get; set; }
+        public bool? ShowToolTips { get; set; }
 
         /// <summary>
         /// Whether or not to execute the customToolTips function instead of drawing the default tooltips
         /// </summary>
-        public bool ShowCustomToolTips { get; set; }
+        public bool? ShowCustomToolTips { get; set; }
 
         /// <summary>
         /// Properties if Custom Tool Tips are to be used
