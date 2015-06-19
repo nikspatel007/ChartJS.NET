@@ -14,7 +14,7 @@ namespace ChartJS.NET.Extensions
     public static class HtmlExtensions
     {
         public static MvcHtmlString BuildChart<TChart, TChartOptions>(this HtmlHelper helper, BaseChart<TChart, TChartOptions> chartOptions) 
-            where TChartOptions : GlobalOptions
+            where TChartOptions : class
             where TChart : BaseDataSets<TChart>
         {
             var canvasTag = new TagBuilder("canvas");
@@ -28,14 +28,29 @@ namespace ChartJS.NET.Extensions
             var tagContent = new StringBuilder();
             tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", chartOptions.CanvasProperties.CanvasId);
             tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.ChartData.ToJson());
-            //tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
-            tagContent.Append("var options = {};");
-            tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{1}(data, options)", chartOptions.CanvasProperties.CanvasId, chartOptions.ChartType);
+            tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
+            tagContent.AppendFormat("var {0}_newChart = new Chart(ctx).{1}(data, options);", chartOptions.CanvasProperties.CanvasId, chartOptions.ChartType);
             tag.InnerHtml = tagContent.ToString();
             
             MvcHtmlString output = new MvcHtmlString(canvasTag.ToString() + tag.ToString());
 
             return output;
+        }
+
+        public static MvcHtmlString BuildGlobalOptions(this HtmlHelper helper, GlobalOptions globalOptions)
+        {
+            var tag = new TagBuilder("script");
+            var tagContent = new StringBuilder();
+
+            if (globalOptions != null)
+            {
+                tag.Attributes.Add("type", "text/javascript");
+                tagContent.Append("Chart.defaults.global = {animate: false};");//, globalOptions.ToJson());
+
+                tag.InnerHtml = tagContent.ToString();
+
+            }
+            return new MvcHtmlString(tag.ToString());
         }
 
         private static string ToJson<T>(this T obj)

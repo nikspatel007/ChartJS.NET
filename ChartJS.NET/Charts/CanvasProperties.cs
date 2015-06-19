@@ -11,7 +11,7 @@ namespace ChartJS.NET.Charts
         public CanvasProperties()
         {
             Height = 400;
-            Width = 800;
+            Width = 600;
             CanvasId = "ChangeMe";
         }
 
