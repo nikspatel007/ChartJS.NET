@@ -135,6 +135,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PieChartController.cs" />
+    <Compile Include="Controllers\LineChartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -246,6 +247,7 @@
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\PieChart\Index.cshtml" />
     <Content Include="Views\DoughnutChart\Index.cshtml" />
+    <Content Include="Views\LineChart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
