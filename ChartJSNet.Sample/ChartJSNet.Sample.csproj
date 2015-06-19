@@ -136,6 +136,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PieChartController.cs" />
     <Compile Include="Controllers\LineChartController.cs" />
+    <Compile Include="Controllers\RadarChartController.cs" />
     <Compile Include="Controllers\PolarAreaChartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -250,6 +251,7 @@
     <Content Include="Views\DoughnutChart\Index.cshtml" />
     <Content Include="Views\LineChart\Index.cshtml" />
     <Content Include="Views\PolarAreaChart\Index.cshtml" />
+    <Content Include="Views\RadarChart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
