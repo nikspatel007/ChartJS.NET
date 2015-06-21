@@ -26,7 +26,8 @@ namespace ChartJS.NET.Sample
                 "~/Scripts/move-top.js",
                 "~/Scripts/responsiveslides.min.js",
                 "~/Scripts/wow.min.js",
-                "~/Scripts/Prism/prism.js"));
+                "~/Scripts/Prism/prism.js",
+                "~/Scripts/jquery.cslider.js",));
 
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
