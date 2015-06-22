@@ -15,12 +15,14 @@ namespace ChartJS.NET.Extensions
             where TChart : new()
         {
 
-            var canvasId = chartOptions.CanvasProperties.CanvasId + new Random().Next().ToString();
+            var canvasId = (chartOptions.CanvasProperties.CanvasId == "Canvas") ?
+                chartOptions.CanvasProperties.CanvasId + new Random().Next().ToString() : chartOptions.CanvasProperties.CanvasId;
 
             var canvasTag = new TagBuilder("canvas");
             canvasTag.Attributes.Add("width", chartOptions.CanvasProperties.Width.ToString());
             canvasTag.Attributes.Add("Height", chartOptions.CanvasProperties.Height.ToString());
             canvasTag.Attributes.Add("id", canvasId);
+            canvasTag.Attributes.Add("class", chartOptions.CanvasProperties.CssClass);
 
             var tag = new TagBuilder("script");
             tag.Attributes.Add("type", "text/javascript");
@@ -29,7 +31,7 @@ namespace ChartJS.NET.Extensions
             tagContent.AppendFormat("var ctx = document.getElementById('{0}').getContext('2d');", canvasId);
             tagContent.AppendFormat("var data = JSON.parse('{0}');", chartOptions.Data.ToJson());
             tagContent.AppendFormat("var options = JSON.parse('{0}');", chartOptions.ChartConfig.ToJson());
-            tagContent.AppendFormat("var {0}_Chart = new Chart(ctx).{1}(data, options);", canvasId, chartOptions.ChartType);
+            tagContent.AppendFormat("var {0}_Chart = new Chart(ctx).{1}(data, options);", canvasId.Replace("-", ""), chartOptions.ChartType);
             tag.InnerHtml = tagContent.ToString();
 
             var output = new MvcHtmlString(canvasTag + "" + tag);
