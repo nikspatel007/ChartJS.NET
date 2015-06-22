@@ -137,7 +137,7 @@ img { border: 0; max-width: 100%; }
   display: block;
   font-size: 1.2em;
   color: #fff;
-  padding: 0.7em 1em;
+  padding: 0.7em .5em;
   font-weight: 400;
  -webkit-transition: all 0.3s ease-out;
  -moz-transition: all 0.3s ease-out;
