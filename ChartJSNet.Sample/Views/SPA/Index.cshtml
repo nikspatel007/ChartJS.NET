@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ChartJS.NET.Sample.ViewModels.chartViewModel
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_SPALayout.cshtml";
 }
@@ -57,7 +59,7 @@
             $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
         });
 
-        $("pre.htmlCode").snippet("language-csharp", { style: "ide-msvcpp" });
+        $("pre.csharp").snippet("language-csharp", { style: "navy" });
         // Finds <pre> elements with the class "htmlCode"
         // and snippet highlights the HTML code within.
     });
@@ -76,6 +78,7 @@
                         <li><a href="#doughnutChart" class="scroll">Doughnut Chart</a></li>
                         <li><a href="#polarAreaChart" class="scroll">Polar Area Chart</a></li>
                         <li><a href="#radarChart" class="scroll">Radar Chart</a></li>
+                        <li><a href="#contact" class="scroll">Contact</a></li>
                         <div class="clear"> </div>
                     </ul>
                 </nav>
@@ -140,66 +143,88 @@
 <div class="team" id="lineChart">
     <div class="wrap">
         <div class="section group">
-            <div class="col_1_of_1 span_1_of_1">
-                <h3>Start proto typing your next project </h3>
-                <p>Terry Rechardson cardigan whatever gentrify Tumblr,gluten-free shorts craysechlitz solvage DIY sutainable Helvetila sriracha.Benh mi ethical.put abird on it VHS irony bisicle rights slow-card iterally retro-sktebord ugh 90'Helvetic hash tag.Next ketfiyeah cornhole park belly,slow-card schilitz.</p>
-                
-                <pre class="language-csharp">
+            <div class="col_1_of_1 span_1_of_1" style="text-align: left;">
+                <h3>Line Chart Example</h3>
+                <p>Add a new controller to your MVC project and add the code below:</p>
+                <pre class="csharp">
                 <code>
-using System.Collections.Generic;
-using System.Web.Mvc;
-using ChartJS.NET.Charts.Line;
-namespace ChartJS.NET.Sample.Controllers
-{
-    public class LineChartController : Controller
-    {
-        public ActionResult Index()
-        {
-            var LineChart = new LineChart();
-            LineChart.Data.Datasets = new List<linedataset>
-            {
-                new LineDataSet
-                {
-                    Label = "First Dataset",
-                    FillColor = "rgba(220, 220, 220, 0.5)",
-                    StrokeColor = "rgba(220, 220, 220, 0.8)",
-                    PointColor = "rgba(220, 220, 220, 0.75)",
-                    PointStrokeColor = "#fff",
-                    PointHighlightFill = "#fff",
-                    PointHighlightStroke = "rgba(220,220,220,1)",
-                    Data = new double[] {65, 59, 80, 81, 56, 55, 40}
-                },
-                new LineDataSet
-                {
-                    Label = "Second Dataset",
-                    FillColor = "rgba(151,187,205,0.2)",
-                    StrokeColor = "rgba(151,187,205,1)",
-                    PointColor = "rgba(151,187,205,1)",
-                    PointStrokeColor = "#fff",
-                    PointHighlightFill = "#fff",
-                    PointHighlightStroke = "rgba(151,187,205,1)",
-                    Data = new double[] {28, 48, 40, 19, 86, 27, 90}
-                }
-            };
-            LineChart.Data.Labels = new List<string>
-            {
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July"
-            };
-            return View(LineChart);
-        }
-    }
-}
+                    using System.Collections.Generic;
+                    using System.Web.Mvc;
+                    using ChartJS.NET.Charts.Line;
+                    namespace ChartJS.NET.Sample.Controllers
+                    {
+                        public class LineChartController : Controller
+                        {
+                            public ActionResult Index()
+                            {
+                                var LineChart = new LineChart();
+                                LineChart.Data.Datasets = new List<linedataset>
+                                {
+                                    new LineDataSet
+                                    {
+                                        Label = "First Dataset",
+                                        FillColor = "rgba(220, 220, 220, 0.5)",
+                                        StrokeColor = "rgba(220, 220, 220, 0.8)",
+                                        PointColor = "rgba(220, 220, 220, 0.75)",
+                                        PointStrokeColor = "#fff",
+                                        PointHighlightFill = "#fff",
+                                        PointHighlightStroke = "rgba(220,220,220,1)",
+                                        Data = new double[] {65, 59, 80, 81, 56, 55, 40}
+                                    },
+                                    new LineDataSet
+                                    {
+                                        Label = "Second Dataset",
+                                        FillColor = "rgba(151,187,205,0.2)",
+                                        StrokeColor = "rgba(151,187,205,1)",
+                                        PointColor = "rgba(151,187,205,1)",
+                                        PointStrokeColor = "#fff",
+                                        PointHighlightFill = "#fff",
+                                        PointHighlightStroke = "rgba(151,187,205,1)",
+                                        Data = new double[] {28, 48, 40, 19, 86, 27, 90}
+                                    }
+                                };
+                                LineChart.Data.Labels = new List<string>
+                                {
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July"
+                                };
+                                return View(LineChart);
+                            }
+                        }
+                    }
                         </code>
                     </pre>
-            </div>
-            <div class="pen">
-                <img src="/ChartJSNet.Sample/Template/images/pen.png">
+                <p>
+                    Add a new view for this action and add the following code to the view:
+                </p>
+                <pre class="csharp">
+                <code>
+                        model ChartJS.NET.Charts.Line.LineChart
+                        Html.BuildChart(Model)
+                    </code>
+                </pre>
+                <p>
+                    And it should render this chart:
+                </p>
+                @Html.BuildChart(Model.LineChart)
+                
+                <p>
+                    You can also add chart options to improve the look and feel of your chart with the following:
+                </p>
+                <pre class="csharp">
+                    <code>
+                        lineChart.ChartConfig.BeizerCurve = false;
+                    </code>
+                </pre>
+                <p>
+                    And this will render the chart like so:
+                </p>
+                @Html.BuildChart(Model.LineChartWithOptions)
             </div>
         </div>
     </div>
@@ -373,7 +398,6 @@ namespace ChartJS.NET.Sample.Controllers
 </div>
 
 <!----End-pricingplans---->
-
 <!---start-team----->
 <div class="ourstory" id="doughnutChart">
     <div class="wrap">
@@ -381,60 +405,6 @@ namespace ChartJS.NET.Sample.Controllers
             <div class="col_1_of_1 span_1_of_1">
                 <h3>Start proto typing your next project </h3>
                 <p>Terry Rechardson cardigan whatever gentrify Tumblr,gluten-free shorts craysechlitz solvage DIY sutainable Helvetila sriracha.Benh mi ethical.put abird on it VHS irony bisicle rights slow-card iterally retro-sktebord ugh 90'Helvetic hash tag.Next ketfiyeah cornhole park belly,slow-card schilitz.</p>
-
-                <pre>
-                <code class="language-csharp" style="text-align: left;">
-using System.Collections.Generic;
-using System.Web.Mvc;
-using ChartJS.NET.Charts.Line;
-namespace ChartJS.NET.Sample.Controllers
-{
-    public class LineChartController : Controller
-    {
-        public ActionResult Index()
-        {
-            var LineChart = new LineChart();
-            LineChart.Data.Datasets = new List<linedataset>
-            {
-                new LineDataSet
-                {
-                    Label = "First Dataset",
-                    FillColor = "rgba(220, 220, 220, 0.5)",
-                    StrokeColor = "rgba(220, 220, 220, 0.8)",
-                    PointColor = "rgba(220, 220, 220, 0.75)",
-                    PointStrokeColor = "#fff",
-                    PointHighlightFill = "#fff",
-                    PointHighlightStroke = "rgba(220,220,220,1)",
-                    Data = new double[] {65, 59, 80, 81, 56, 55, 40}
-                },
-                new LineDataSet
-                {
-                    Label = "Second Dataset",
-                    FillColor = "rgba(151,187,205,0.2)",
-                    StrokeColor = "rgba(151,187,205,1)",
-                    PointColor = "rgba(151,187,205,1)",
-                    PointStrokeColor = "#fff",
-                    PointHighlightFill = "#fff",
-                    PointHighlightStroke = "rgba(151,187,205,1)",
-                    Data = new double[] {28, 48, 40, 19, 86, 27, 90}
-                }
-            };
-            LineChart.Data.Labels = new List<string>
-            {
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July"
-            };
-            return View(LineChart);
-        }
-    }
-}
-                        </code>
-                    </pre>
             </div>
             <div class="pen">
                 <img src="/ChartJSNet.Sample/Template/images/pen.png">
@@ -443,8 +413,6 @@ namespace ChartJS.NET.Sample.Controllers
     </div>
 </div>
 <!---//end-team----->
-
-
 <!----start-contact---->
 <div class="contact" id="contact">
     <div class="contact">
@@ -484,9 +452,12 @@ namespace ChartJS.NET.Sample.Controllers
             <div class="footer-right">
                 <ul>
                     <li class="active"><a href="#home" class="scroll">Home</a></li>
-                    <li><a href="#team" class="scroll">Team</a></li>
-                    <li><a href="#ourstory" class="scroll">Our story</a></li>
-                    <li><a href="#blog" class="scroll">Blog</a></li>
+                    <li><a href="#lineChart" class="scroll">Line Chart</a></li>
+                    <li><a href="#barChart" class="scroll">Bar Chart</a></li>
+                    <li><a href="#pieChart" class="scroll">Pie Chart</a></li>
+                    <li><a href="#doughnutChart" class="scroll">Doughnut Chart</a></li>
+                    <li><a href="#polarAreaChart" class="scroll">Polar Area Chart</a></li>
+                    <li><a href="#radarChart" class="scroll">Radar Chart</a></li>
                     <li><a href="#contact" class="scroll">Contact</a></li>
                     <div class="clear"> </div>
                 </ul>

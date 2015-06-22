@@ -222,10 +222,13 @@ img { border: 0; max-width: 100%; }
 }
 /*---End-top-header----*/
 /*  GRID OF One   =========================================== */
-#team {
+.team {
 	background: #fff;
 	padding:2em 0;
 }
+
+
+
 .col_1_of_1{
 	display: block;
 	text-align: center;
@@ -233,7 +236,7 @@ img { border: 0; max-width: 100%; }
 	margin: 0.5em auto;
 }
 .span_1_of_1  h3{
-	color:#535A5E;
+	color:#FFFFFF;
 	margin-bottom:0.5em;
 	font-size:2.3em;
 	line-height: 1.2em;
@@ -242,10 +245,11 @@ img { border: 0; max-width: 100%; }
 	letter-spacing: -1px;
 	text-align: center;
 }
+
 .span_1_of_1  p{
 	font-size:1.2em;
 	padding:0.5em  0;
-	color:#A7AAAC;
+	color:#fff;
 	line-height: 1.9em;
 	text-align: center;
 	width: 100%;
@@ -253,6 +257,27 @@ img { border: 0; max-width: 100%; }
 .pen{
 	text-align: center;	
 }
+
+.team h3{
+  color: #535A5E;
+  margin-bottom: 0.5em;
+  font-size: 2.3em;
+  line-height: 1.2em;
+  font-weight: 600;
+  margin-top: 0px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.team p{
+    font-size:1.2em;
+	padding:0.5em  0;
+	color:#535A5E;
+	line-height: 1.9em;
+	text-align: center;
+	width: 100%;
+}
+
 /********/
 .ourstory {
 	background:#73A1AD;
@@ -576,7 +601,7 @@ form input[type="submit"]:hover{
 	margin: 0 auto;
 	font-size: 0.98em;
 	}
-	#team {
+	.team {
 	padding:1em 0;
 	}
 	.our-story p { 
@@ -718,7 +743,7 @@ form input[type="submit"]:hover{
 	font-size:0.8725em;
 	margin: 0 auto;
 	}
-	#team {
+	.team {
 	padding: 0.5em 0;
 	}
 	.our-story p {
