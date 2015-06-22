@@ -47,12 +47,6 @@ namespace ChartJS.NET.Sample.Controllers
                 "July"
             };
 
-
-            //LineChart.ChartConfig.ScaleGridLineColor = "rgba(0,0,0, 1)";
-            //LineChart.ChartConfig.ScaleGridLineWidth = 2;
-            //LineChart.ChartConfig.ScaleShowGridLines = true;
-            //LineChart.ChartConfig.ScaleShowHorizontalLines = true;
-
             return View(LineChart);
         }
     }

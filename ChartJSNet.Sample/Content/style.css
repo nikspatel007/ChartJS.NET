@@ -254,9 +254,11 @@ img { border: 0; max-width: 100%; }
 	text-align: center;	
 }
 /********/
-div#ourstory {
+.ourstory {
 	background:#73A1AD;
 	padding:2em 0;
+    color: white;
+
 }
 .our-story h3{
 	text-align:center;

@@ -4,60 +4,63 @@
 }
 
 <script>
-$(document).ready(function() {
+    $(document).ready(function () {
 
-		$("#owl-demo").owlCarousel({
-		    items : 1,
-		    lazyLoad : true,
-		    autoPlay : true,
-		    navigation : true,
-		    navigationText : ["",""],
-		    rewindNav :true,
-		    scrollPerPage :true,
-		    pagination : true,
-    	    paginationNumbers: false,
-		});
+        $("#owl-demo").owlCarousel({
+            items: 1,
+            lazyLoad: true,
+            autoPlay: true,
+            navigation: true,
+            navigationText: ["", ""],
+            rewindNav: true,
+            scrollPerPage: true,
+            pagination: true,
+            paginationNumbers: false,
+        });
 
-		$("#owl-demo1").owlCarousel({
-		    items : 1,
-		    lazyLoad : true,
-		    autoPlay : true,
-		    navigation : true,
-		    navigationText : ["",""],
-		    rewindNav : true,
-		    scrollPerPage :true,
-		    pagination : false,
-    	    paginationNumbers: false,
-		});
+        $("#owl-demo1").owlCarousel({
+            items: 1,
+            lazyLoad: true,
+            autoPlay: true,
+            navigation: true,
+            navigationText: ["", ""],
+            rewindNav: true,
+            scrollPerPage: true,
+            pagination: false,
+            paginationNumbers: false,
+        });
 
-		$('.popup-with-zoom-anim').magnificPopup({
-		    type: 'inline',
-		    fixedContentPos: false,
-		    fixedBgPos: true,
-		    overflowY: 'auto',
-		    closeBtnInside: true,
-		    preloader: false,
-		    midClick: true,
-		    removalDelay: 300,
-		    mainClass: 'my-mfp-zoom-in'
-		});
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
 
-		var defaults = {
-		    containerID: 'toTop', // fading element id
-		    containerHoverID: 'toTopHover', // fading element hover id
-		    scrollSpeed: 1200,
-		    easingType: 'linear'
-		};
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
 
 
-		$().UItoTop({ easingType: 'easeOutQuart' });
+        $().UItoTop({ easingType: 'easeOutQuart' });
 
-		$(".scroll").click(function (event) {
-		    event.preventDefault();
-		    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
-		});
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+        });
 
-});
+        $("pre.htmlCode").snippet("language-csharp", { style: "ide-msvcpp" });
+        // Finds <pre> elements with the class "htmlCode"
+        // and snippet highlights the HTML code within.
+    });
 </script>
 
 <div class="content" id="home">
@@ -67,14 +70,17 @@ $(document).ready(function() {
                 <nav>
                     <ul>
                         <li class="active"><a href="#home" class="scroll">Home</a></li>
-                        <li><a href="#team" class="scroll">Team</a></li>
-                        <li><a href="#ourstory" class="scroll">Our story</a></li>
-                        <li><a href="#blog" class="scroll">Blog</a></li>
-                        <li><a href="#contact" class="scroll">Contact</a></li>
+                        <li><a href="#lineChart" class="scroll">Line Chart</a></li>
+                        <li><a href="#barChart" class="scroll">Bar Chart</a></li>
+                        <li><a href="#pieChart" class="scroll">Pie Chart</a></li>
+                        <li><a href="#doughnutChart" class="scroll">Doughnut Chart</a></li>
+                        <li><a href="#polarAreaChart" class="scroll">Polar Area Chart</a></li>
+                        <li><a href="#radarChart" class="scroll">Radar Chart</a></li>
                         <div class="clear"> </div>
                     </ul>
                 </nav>
-                <h1><a href="/SPA">ChartJS.NET Wrapper</a></h1>
+
+                <h1><a href="/SPA"></a></h1>
                 <a href="#" id="navbtn">Nav Menu</a>
                 <div class="clear"> </div>
             </header>
@@ -85,12 +91,12 @@ $(document).ready(function() {
             <!---start-da-slider----->
             <div id="da-slider" class="da-slider">
                 <div class="da-slide">
-                    <h2>Simple, Clean Wrapper for Chart.js</h2>
+                    <h2>Simple, Clean Wrapper for Chart.js: ChartJS.NET</h2>
                     <p>
                         This is a simple to use .NET wrapper for the Chart.js charting library.  It is
                         written in C# using SOLID principles.
                     </p>
-                    @*<a href="#" class="da-link">Order Now</a>*@
+                    <a href="https://github.com/nikspatel007/ChartJS.NET" target="_blank" class="da-link">Download Now</a>
                 </div>
                 @*<div class="da-slide">
                         <h2>Best Ideas Start On Paper</h2>
@@ -131,12 +137,66 @@ $(document).ready(function() {
     </div>
 </div>
 <!---start-team----->
-<div class="team" id="team">
+<div class="team" id="lineChart">
     <div class="wrap">
         <div class="section group">
             <div class="col_1_of_1 span_1_of_1">
                 <h3>Start proto typing your next project </h3>
                 <p>Terry Rechardson cardigan whatever gentrify Tumblr,gluten-free shorts craysechlitz solvage DIY sutainable Helvetila sriracha.Benh mi ethical.put abird on it VHS irony bisicle rights slow-card iterally retro-sktebord ugh 90'Helvetic hash tag.Next ketfiyeah cornhole park belly,slow-card schilitz.</p>
+                
+                <pre class="language-csharp">
+                <code>
+using System.Collections.Generic;
+using System.Web.Mvc;
+using ChartJS.NET.Charts.Line;
+namespace ChartJS.NET.Sample.Controllers
+{
+    public class LineChartController : Controller
+    {
+        public ActionResult Index()
+        {
+            var LineChart = new LineChart();
+            LineChart.Data.Datasets = new List<linedataset>
+            {
+                new LineDataSet
+                {
+                    Label = "First Dataset",
+                    FillColor = "rgba(220, 220, 220, 0.5)",
+                    StrokeColor = "rgba(220, 220, 220, 0.8)",
+                    PointColor = "rgba(220, 220, 220, 0.75)",
+                    PointStrokeColor = "#fff",
+                    PointHighlightFill = "#fff",
+                    PointHighlightStroke = "rgba(220,220,220,1)",
+                    Data = new double[] {65, 59, 80, 81, 56, 55, 40}
+                },
+                new LineDataSet
+                {
+                    Label = "Second Dataset",
+                    FillColor = "rgba(151,187,205,0.2)",
+                    StrokeColor = "rgba(151,187,205,1)",
+                    PointColor = "rgba(151,187,205,1)",
+                    PointStrokeColor = "#fff",
+                    PointHighlightFill = "#fff",
+                    PointHighlightStroke = "rgba(151,187,205,1)",
+                    Data = new double[] {28, 48, 40, 19, 86, 27, 90}
+                }
+            };
+            LineChart.Data.Labels = new List<string>
+            {
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July"
+            };
+            return View(LineChart);
+        }
+    }
+}
+                        </code>
+                    </pre>
             </div>
             <div class="pen">
                 <img src="/ChartJSNet.Sample/Template/images/pen.png">
@@ -146,7 +206,7 @@ $(document).ready(function() {
 </div>
 <!---//end-team----->
 <!---start-our story----->
-<div class="ourstory" id="ourstory">
+<div class="ourstory" id="barChart">
     <div class="our-story">
         <h3>Works in any browser </h3>
         <p>Revolvationary notebook with eco-friendly paper,advanced surface technology and degital sharing integration.</p>
@@ -196,7 +256,7 @@ $(document).ready(function() {
     </div>
 </div>
 
-<div class="blog" id="blog">
+<div class="blog" id="pieChart">
     <div class="wrap">
         <div class="pricing-plans">
             <h5>Flexible pricing plans to fulfill your needs and solve your problems</h5>
@@ -313,6 +373,78 @@ $(document).ready(function() {
 </div>
 
 <!----End-pricingplans---->
+
+<!---start-team----->
+<div class="ourstory" id="doughnutChart">
+    <div class="wrap">
+        <div class="section group">
+            <div class="col_1_of_1 span_1_of_1">
+                <h3>Start proto typing your next project </h3>
+                <p>Terry Rechardson cardigan whatever gentrify Tumblr,gluten-free shorts craysechlitz solvage DIY sutainable Helvetila sriracha.Benh mi ethical.put abird on it VHS irony bisicle rights slow-card iterally retro-sktebord ugh 90'Helvetic hash tag.Next ketfiyeah cornhole park belly,slow-card schilitz.</p>
+
+                <pre>
+                <code class="language-csharp" style="text-align: left;">
+using System.Collections.Generic;
+using System.Web.Mvc;
+using ChartJS.NET.Charts.Line;
+namespace ChartJS.NET.Sample.Controllers
+{
+    public class LineChartController : Controller
+    {
+        public ActionResult Index()
+        {
+            var LineChart = new LineChart();
+            LineChart.Data.Datasets = new List<linedataset>
+            {
+                new LineDataSet
+                {
+                    Label = "First Dataset",
+                    FillColor = "rgba(220, 220, 220, 0.5)",
+                    StrokeColor = "rgba(220, 220, 220, 0.8)",
+                    PointColor = "rgba(220, 220, 220, 0.75)",
+                    PointStrokeColor = "#fff",
+                    PointHighlightFill = "#fff",
+                    PointHighlightStroke = "rgba(220,220,220,1)",
+                    Data = new double[] {65, 59, 80, 81, 56, 55, 40}
+                },
+                new LineDataSet
+                {
+                    Label = "Second Dataset",
+                    FillColor = "rgba(151,187,205,0.2)",
+                    StrokeColor = "rgba(151,187,205,1)",
+                    PointColor = "rgba(151,187,205,1)",
+                    PointStrokeColor = "#fff",
+                    PointHighlightFill = "#fff",
+                    PointHighlightStroke = "rgba(151,187,205,1)",
+                    Data = new double[] {28, 48, 40, 19, 86, 27, 90}
+                }
+            };
+            LineChart.Data.Labels = new List<string>
+            {
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July"
+            };
+            return View(LineChart);
+        }
+    }
+}
+                        </code>
+                    </pre>
+            </div>
+            <div class="pen">
+                <img src="/ChartJSNet.Sample/Template/images/pen.png">
+            </div>
+        </div>
+    </div>
+</div>
+<!---//end-team----->
+
+
 <!----start-contact---->
 <div class="contact" id="contact">
     <div class="contact">

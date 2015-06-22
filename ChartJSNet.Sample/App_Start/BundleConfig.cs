@@ -16,6 +16,7 @@ namespace ChartJS.NET.Sample
                 "~/Scripts/jquery.validate.unobtrusive.js",
                 "~/Scripts/jquery.easing.1.3.js",
                 "~/Scripts/jquery.magnific-popup.js",
+                "~/Scripts/jquery.snippet.min.js",
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/common.js",
                 "~/Scripts/Chart.js",
@@ -26,8 +27,7 @@ namespace ChartJS.NET.Sample
                 "~/Scripts/move-top.js",
                 "~/Scripts/responsiveslides.min.js",
                 "~/Scripts/wow.min.js",
-                "~/Scripts/Prism/prism.js",
-                "~/Scripts/jquery.cslider.js",));
+                "~/Scripts/jquery.cslider.js"));
 
 
             bundles.Add(new StyleBundle("~/bundles/styles").Include(
@@ -36,10 +36,10 @@ namespace ChartJS.NET.Sample
                 "~/Content/themes/base/*.css",
                 "~/Content/style.css",
                 "~/Content/animate.css",
-                "~/Content/Prism/*.css",
                 "~/Content/magnific-popup.css",
                 "~/Content/owl.carousel.css",
-                "~/Content/slider.css"));
+                "~/Content/slider.css",
+                "~/Content/jquery.snippet.min.css"));
 
 
             BundleTable.EnableOptimizations = true;
