@@ -43,6 +43,9 @@ namespace ChartJS.NET.Sample.Controllers
                 "July"
             };
 
+            barChart.CanvasProperties.Width = 200;
+            barChart.CanvasProperties.Height = 200;
+
             return View(barChart);
         }
     }

@@ -41,7 +41,22 @@ namespace ChartJS.NET
         /// <summary>
         ///     Properties to define if ScaleOverride is true; All properties are required
         /// </summary>
-        public ScaleOverride ScaleOverrideProperties { get; set; }
+        //public ScaleOverride ScaleOverrideProperties { get; set; }
+
+        /// <summary>
+        ///     The number of steps in hard coded scale; applies if ScaleOverride is set to true
+        /// </summary>
+        public double? scaleSteps { get; set; }
+
+        /// <summary>
+        ///     The value jump in a hard coded scale; applies if ScaleOverride is set to true
+        /// </summary>
+        public double? scaleStepWidth { get; set; }
+
+        /// <summary>
+        ///     The scale start value in a hard coded scale; applies if ScaleOverride is set to true
+        /// </summary>
+        public double? scaleStartValue { get; set; }
 
         /// <summary>
         ///     Whether or not the chart is responsive and resizes with the browser size
