@@ -1,14 +1,13 @@
-﻿@using ChartJS.NET
-@model IEnumerable<ChartJS.NET.Charts.Pie.PieChart>
+﻿@model ChartJS.NET.Charts.Pie.PieChart
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Pie Chart Example</h2>
+<div class="page-header">
+    <h1>Pie Chart Example</h1>
+</div>
 
-@Html.BuildChart(Model.Select(c1 => c1).FirstOrDefault())
+@Html.BuildChart(Model)
 <br />
-<br />
-<br />
-@Html.BuildChart(Model.Select(c2 => c2).Skip(1).FirstOrDefault())
+

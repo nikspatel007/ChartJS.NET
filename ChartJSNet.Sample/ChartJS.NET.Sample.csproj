@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BarChartController.cs" />
     <Compile Include="Controllers\DoughnutChartController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -298,6 +299,7 @@
     <Content Include="Views\RadarChart\Index.cshtml" />
     <Content Include="Views\Shared\_SPALayout.cshtml" />
     <Content Include="Views\SPA\Index.cshtml" />
+    <Content Include="Views\BarChart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
