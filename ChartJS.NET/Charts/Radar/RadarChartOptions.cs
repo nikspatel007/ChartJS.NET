@@ -1,30 +1,8 @@
-﻿namespace ChartJS.NET.Charts.Radar
+﻿using System.Drawing;
+namespace ChartJS.NET.Charts.Radar
 {
     public class RadarChartOptions
     {
-        /// <summary>
-        ///     Default Values.
-        /// </summary>
-        public RadarChartOptions()
-        {
-            ScaleShowGridLines = true;
-            AngleShowLineOut = true;
-            ScaleShowLabels = false;
-            ScaleBeginAtZero = true;
-            AngleLineColor = "rgba(0,0,0,.1)";
-            AngleLineWidth = 1;
-            PointLabelFontFamily = "Arial";
-            PointLabelFontStyle = "normal";
-            PointLabelFontSize = 10;
-            PointLabelFontColor = "#666";
-            PointDot = true;
-            PointDotRadius = 4;
-            PointDotStrokeWidth = 1;
-            PointHitDetectionRadius = 20;
-            DataSetStrokeWidth = 2;
-            DatasetFill = true;
-        }
-
         /// <summary>
         ///     Whether grid lines are shown across the chart
         /// </summary>
@@ -48,7 +26,7 @@
         /// <summary>
         ///     Colour of the angle line
         /// </summary>
-        public string AngleLineColor { get; set; }
+        public Color AngleLineColor { get; set; }
 
         /// <summary>
         ///     Pixel width of the angle line
@@ -73,7 +51,7 @@
         /// <summary>
         ///     Pixel width of point dot stroke
         /// </summary>
-        public string PointLabelFontColor { get; set; }
+        public Color PointLabelFontColor { get; set; }
 
         /// <summary>
         ///     Whether to show a dot for each point

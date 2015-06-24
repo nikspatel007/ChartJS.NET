@@ -1,4 +1,5 @@
-﻿namespace ChartJS.NET.Charts.Line
+﻿using System.Drawing;
+namespace ChartJS.NET.Charts.Line
 {
     public class LineChartOptions
     {
@@ -10,7 +11,7 @@
         /// <summary>
         ///     Colour of the grid lines; use rgba format - "rgba(0,0,0,.1)"
         /// </summary>
-        public string ScaleGridLineColor { get; set; }
+        public Color ScaleGridLineColor { get; set; }
 
         /// <summary>
         ///     Width of the grid lines

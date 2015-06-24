@@ -1,4 +1,6 @@
-﻿namespace ChartJS.NET.Charts.Bar
+﻿using System.Drawing;
+
+namespace ChartJS.NET.Charts.Bar
 {
     public class BarChartOptions
     {
@@ -10,7 +12,7 @@
         /// <summary>
         ///     Sets the gridline color; use rgba format - "rgba(0,0,0,.1)"
         /// </summary>
-        public string ScaleGridLineColor { get; set; }
+        public Color ScaleGridLineColor { get; set; }
 
         /// <summary>
         ///     Sets the gridline width in pixels

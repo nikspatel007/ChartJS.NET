@@ -1,4 +1,5 @@
 ﻿using ChartJS.NET.Infrastructure;
+using System.Drawing;
 
 namespace ChartJS.NET.Charts.PolarAreaChart
 {
@@ -12,7 +13,7 @@ namespace ChartJS.NET.Charts.PolarAreaChart
         /// <summary>
         ///     The colour of the label backdrop
         /// </summary>
-        public string ScaleBackdropColor { get; set; }
+        public Color ScaleBackdropColor { get; set; }
 
         /// <summary>
         ///     Whether the scale should begin at zero
@@ -37,7 +38,7 @@ namespace ChartJS.NET.Charts.PolarAreaChart
         /// <summary>
         ///     The colour of the stroke on each segement.
         /// </summary>
-        public string SegmentStrokeColor { get; set; }
+        public Color SegmentStrokeColor { get; set; }
 
         /// <summary>
         ///     The width of the stroke value in pixels

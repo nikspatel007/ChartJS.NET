@@ -1,4 +1,5 @@
 using ChartJS.NET.Infrastructure;
+using System.Drawing;
 
 namespace ChartJS.NET.Charts.Pie
 {
@@ -12,7 +13,7 @@ namespace ChartJS.NET.Charts.Pie
         /// <summary>
         ///     Color of each segment stroke; this should be a hex color code i.e. "#fff"
         /// </summary>
-        public string SegmentStrokeColor { get; set; }
+        public Color SegmentStrokeColor { get; set; }
 
         /// <summary>
         ///     The width of each segment stroke in pixels

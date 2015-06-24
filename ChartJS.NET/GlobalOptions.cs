@@ -39,11 +39,6 @@ namespace ChartJS.NET
         public bool? ScaleOverride { get; set; }
 
         /// <summary>
-        ///     Properties to define if ScaleOverride is true; All properties are required
-        /// </summary>
-        //public ScaleOverride ScaleOverrideProperties { get; set; }
-
-        /// <summary>
         ///     The number of steps in hard coded scale; applies if ScaleOverride is set to true
         /// </summary>
         public double? scaleSteps { get; set; }
