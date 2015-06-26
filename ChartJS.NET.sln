@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJS.NET", "ChartJS.NET\ChartJS.NET.csproj", "{488B4D1D-CD55-459E-A868-30E2DC3F95A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJS.NET.Tests", "ChartJS.NET.Tests\ChartJS.NET.Tests.csproj", "{646D9E98-E8DD-4C48-9DFF-F7DDF5B49D51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJS.NET.Sample", "ChartJSNet.Sample\ChartJS.NET.Sample.csproj", "{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{488B4D1D-CD55-459E-A868-30E2DC3F95A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{488B4D1D-CD55-459E-A868-30E2DC3F95A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{488B4D1D-CD55-459E-A868-30E2DC3F95A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{488B4D1D-CD55-459E-A868-30E2DC3F95A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646D9E98-E8DD-4C48-9DFF-F7DDF5B49D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646D9E98-E8DD-4C48-9DFF-F7DDF5B49D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646D9E98-E8DD-4C48-9DFF-F7DDF5B49D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646D9E98-E8DD-4C48-9DFF-F7DDF5B49D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
