@@ -3,7 +3,16 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="page-header">
-    <h2>Bar Chart Example</h2>
+
+<div class="panel panel-primary" style="padding-left: 1em; padding-top: 1em;">
+    <div class="panel-heading">
+        Bar Chart Example
+    </div>
+    <div class="panel-body">
+        <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+            <div class="col-md-1">
+                @Html.BuildChart(Model)
+            </div>
+        </div>
+    </div>
 </div>
-@Html.BuildChart(Model)

@@ -3,42 +3,48 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="page-header">
-    <h1>ChartJS.NET Samples Home</h1>
-</div>
-
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        Below are links to the different chart examples
+<div style="padding-left: 1em;">
+    <div class="page-header">
+        <h1>ChartJS.NET Samples Home</h1>
     </div>
-    <div class="panel-body">
-        <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
-            <div class="col-md-6">
-                @Html.ActionLink("View Bar Chart Example", "Index", "BarChart")
-            </div>
-            <div class="col-md-6">
-                @Html.ActionLink("View Line Chart Example", "Index", "LineChart")
-            </div>
-        </div>
-        <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
-            <div class="col-md-6">
-                @Html.ActionLink("View Doughnut Chart Example", "Index", "DoughnutChart")
-            </div>
-            <div class="col-md-6">
-                @Html.ActionLink("View Pie Chart Example", "Index", "PieChart")
-            </div>
-        </div>
 
-        <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
-            <div class="col-md-6">
-                @Html.ActionLink("View Polar Area Chart Example", "Index", "PolarAreaChart")
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Below are links to the different chart examples
+        </div>
+        <div class="panel-body">
+            <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+                <div class="col-md-6">
+                    <span style="display: block;"><i class="fa fa-bar-chart fa-5x"></i></span>
+                    @Html.ActionLink("View Bar Chart Example", "Index", "BarChart")
+                </div>
+                <div class="col-md-6">
+                    <span style="display: block;"><i class="fa fa-line-chart fa-5x"></i></span>
+                    @Html.ActionLink("View Line Chart Example", "Index", "LineChart")
+                </div>
             </div>
-            <div class="col-md-6">
-                @Html.ActionLink("View Radar Chart Example", "Index", "RadarChart")
+            <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+                <div class="col-md-6">
+                    <span style="display: block;"><i class="fa fa-dot-circle-o fa-5x"></i></span>
+                    @Html.ActionLink("View Doughnut Chart Example", "Index", "DoughnutChart")
+                </div>
+                <div class="col-md-6">
+                    <span style="display: block;"><i class="fa fa-pie-chart fa-5x"></i></span>
+                    @Html.ActionLink("View Pie Chart Example", "Index", "PieChart")
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+                <div class="col-md-6">
+                    <span style="display: block;"><i class="fa fa-area-chart fa-5x"></i></span>
+                    @Html.ActionLink("View Polar Area Chart Example", "Index", "PolarAreaChart")
+                </div>
+                <div class="col-md-6">
+                    @Html.ActionLink("View Radar Chart Example", "Index", "RadarChart")
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 <br />
 <br />

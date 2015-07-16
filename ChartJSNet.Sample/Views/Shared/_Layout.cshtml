@@ -13,7 +13,37 @@
 
 </head>
 <body>
-<div class="container body-content">
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="https://github.com/nikspatel007/ChartJS.NET" target="_blank">
+                    ChartJS.NET
+                </a>
+            </li>
+            <li>
+                @Html.ActionLink("Examples Home", "Index", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("Bar Chart", "Index", "BarChart")
+            </li>
+            <li>
+                @Html.ActionLink("Line Chart", "Index", "LineChart")
+            </li>
+            <li>
+                @Html.ActionLink("Doughnut Chart", "Index", "DoughnutChart")
+            </li>
+            <li>
+                @Html.ActionLink("Pie Chart", "Index", "PieChart")
+            </li>
+            <li>
+                @Html.ActionLink("Polar Area Chart", "Index", "PolarAreaChart")
+            </li>
+            <li>
+                @Html.ActionLink("Radar Chart", "Index", "RadarChart")
+            </li>
+        </ul>
+    </div>
     @RenderBody()
 </div>
 

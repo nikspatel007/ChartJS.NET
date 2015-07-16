@@ -39,7 +39,8 @@ namespace ChartJS.NET.Sample
                 "~/Content/magnific-popup.css",
                 "~/Content/owl.carousel.css",
                 "~/Content/slider.css",
-                "~/Content/jquery.snippet.min.css"));
+                "~/Content/jquery.snippet.min.css",
+                "~/Content/font-awesome.min.css"));
 
 
             BundleTable.EnableOptimizations = true;
