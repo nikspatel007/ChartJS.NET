@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="panel panel-primary" style="padding-left: 1em; padding-top: 1em;">
+<div class="panel panel-primary">
     <div class="panel-heading">
         Bar Chart Example
     </div>
@@ -12,6 +12,71 @@
         <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
             <div class="col-md-1">
                 @Html.BuildChart(Model)
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        The code that created the chart above
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-10">
+                <pre>
+                    <code>
+    using ChartJS.NET.Charts.Bar;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+namespace ChartJSNet.Sample.Controllers
+{
+    public class BarChartController : Controller
+    {
+        // GET: BarChart
+        public ActionResult Index()
+        {
+            var barChart = new BarChart();
+            barChart.Data.Datasets = new List<bardataset>
+            {
+                new BarDataSet
+                {
+                    Data = new double[] {65, 59, 80, 81, 56, 55, 40},
+                    Label = "First Dataset",
+                    FillColor = "rgba(220, 220, 220, 0.5)",
+                    StrokeColor = "rgba(220, 220, 220, 0.8)",
+                    HighlightFillColor = "rgba(220, 220, 220, 0.75)",
+                    HighlightStrokeColor = "rgba(220, 220, 220, 1)"
+                },
+                new BarDataSet
+                {
+                    Data = new double[] {28, 48, 40, 19, 86, 27, 90},
+                    Label = "Second Dataset",
+                    FillColor = "rgba(151,187,205, 0.5)",
+                    StrokeColor = "rgba(151,187,205, 0.8)",
+                    HighlightFillColor = "rgba(151,187,205, 0.75)",
+                    HighlightStrokeColor = "rgba(151,187,205, 1)"
+                }
+            };
+            barChart.Data.Labels = new List<string>
+            {
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July"
+            };
+            return View(barChart);
+        }
+    }
+}
+</code>
+</pre>
             </div>
         </div>
     </div>
